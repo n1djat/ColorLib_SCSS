@@ -1,0 +1,21 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin div-size {
+    width: 80%;
+    height: 90%;
+}
+
+@mixin image-a-size {
+    width: 50%;
+    height: 100%;
+    @include flex;
+}
+
+@mixin img-size {
+    width: 100%;
+    height: auto;
+}

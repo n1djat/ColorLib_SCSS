@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+// SECTION A
+
+#section-a {
+    width: 100%;
+    height: 90%;
+    background-color: $bg-color;
+    @include flex;
+    margin: 30px 0px;
+
+    .div-a {
+        @include div-size;
+        @include flex;
+
+        .items-a {
+            @extend %items;
+
+            .items-text {
+                .text-h {
+                    @extend %text;
+                }
+
+                h1 {
+                    font: {
+                        size: 40px;
+                    }
+                }
+
+                .content-a {
+                    font-size: 17px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .restoran-a {
+                width: 80%;
+                height: 45%;
+                @include flex;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .elements-r {
+                    @include flex;
+                    width: 45%;
+                    height: 34%;
+
+                    img {
+                        width: 20%;
+                        height: 50%;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+
+        }
+
+        .image-a {
+            @include image-a-size;
+
+            img {
+                @include img-size;
+            }
+        }
+
+
+    }
+}
+
+
+// RESPONSIVE
+
+// 575-992
+// max-witdh: 575px
+
+
+
+@media screen and (min-width:575px) and (max-width: 992px){
+    #section-a {
+        .div-a {
+            display: flex;
+            flex-direction: column;
+
+            .items-a {
+                display: block;
+                width: 100%;
+            }
+
+            .image-a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 575px){
+    
+    #section-a {
+        .div-a {
+            display: flex;
+            flex-direction: column;
+
+            .items-a {
+                width: 100%;
+                height: 50%;
+                
+                .restoran-a {
+                    width: 100%;
+                    flex-direction: column;
+
+                    .elements-r {
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .image-a {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    }
+}
+
+
+// SECTION B
+
+
+#section-b {
+    width: 100%;
+    height: auto;
+    margin: 30px 0px;
+    @include flex;
+
+    .div-b {
+        @include div-size;
+        @include flex;
+
+        .image-b {
+            @include image-a-size;
+
+            img {
+                @include img-size;
+            }
+        }
+
+
+        .items-b {
+            @extend %items;
+
+            .b-text {
+                .b-head {
+                    @extend %text;
+                }
+
+                h1 {
+                    font: {
+                        size: 40px;
+                    }
+                }
+
+                .content-b {
+                    font-size: 18px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .element-b {
+                width: 100%;
+                height: 25%;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .btn {
+                margin-top: 30px;
+                a{
+                   padding: 20px 50px;
+                   border-radius: 5px;
+                   border: 1px solid $primary-color;
+                   text-decoration: none; 
+                   letter-spacing: 1px;
+                   color: gray;
+                }
+                
+            }
+
+            .btn:hover a{
+                background-color: $primary-color;
+                color: $bg-color;
+                transition: all 1s;
+            }   
+        }
+    }   
+}
+
+
+// RESPONS B
+
+@media screen and (max-width: 992px){
+    #section-b {
+        .div-b {
+            display: flex;
+            flex-direction: column;
+
+            .items-b {
+                display: block;
+                width: 100%;
+            }
+
+            .image-b {
+                width: 100%;
+            }
+        }
+    }
+}
+

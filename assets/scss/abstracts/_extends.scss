@@ -1,0 +1,19 @@
+%items {
+    width: 50%;
+    height: 70%;
+    font-family: $font-family;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+%text {
+    color: $primary-color;
+    margin-bottom: 20px;
+}
+
+// %first-res-div {
+//     display: flex;
+//     flex-direction: column;
+// }
